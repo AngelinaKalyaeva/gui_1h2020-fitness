@@ -14,10 +14,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    neweventcreationform.cpp
+    neweventcreationform.cpp \
+    event.cpp
 
 HEADERS  += mainwindow.h \
-    neweventcreationform.h
+    neweventcreationform.h \
+    event.h
 
 FORMS    += mainwindow.ui \
     neweventcreationform.ui
