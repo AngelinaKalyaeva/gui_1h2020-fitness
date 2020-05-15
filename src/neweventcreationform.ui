@@ -38,7 +38,7 @@
        <item>
         <widget class="QLineEdit" name="lineEdit_2">
          <property name="text">
-          <string>[Название события]</string>
+          <string>[Количество]</string>
          </property>
         </widget>
        </item>

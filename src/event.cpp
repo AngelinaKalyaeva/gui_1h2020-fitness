@@ -1,14 +1,14 @@
 #include "event.h"
 
-Event::Event(QString name, QString description, int done)
+Event::Event(int plan, QString description, int done)
 {
-    this->name = name;
+    this->plan = plan;
     this->description = description;
     this->done = done;
 }
 
-QString Event::getName() {
-    return this->name;
+int Event::getPlan() {
+    return this->plan;
 }
 
 QString Event::getDescription() {
@@ -19,8 +19,8 @@ int Event::getDone() {
     return this->done;
 }
 
-void Event::setName(QString name) {
-    this->name = name;
+void Event::setPlan(int plan) {
+    this->plan = plan;
 }
 
 

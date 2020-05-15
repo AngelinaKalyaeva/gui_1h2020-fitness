@@ -15,7 +15,7 @@ class NewEventCreationForm : public QDialog
 
 public:
     QString getCalendarWidgetDate();
-    QString getName();
+    int getPlan();
     QString getDescription();
     void clearName();
     void clearDescription();

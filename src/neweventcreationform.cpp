@@ -26,8 +26,8 @@ QString NewEventCreationForm::getCalendarWidgetDate() {
     return this->ui->calendarWidget->selectedDate().toString();
 }
 
-QString NewEventCreationForm::getName() {
-    return this->ui->lineEdit_2->text();
+int NewEventCreationForm::getPlan() {
+    return this->ui->lineEdit_2->text().toInt();
 }
 
 QString NewEventCreationForm::getDescription() {
@@ -35,13 +35,12 @@ QString NewEventCreationForm::getDescription() {
 }
 
 void NewEventCreationForm::clearName() {
-    this->ui->lineEdit_2->setText("[Название события]");
+    this->ui->lineEdit_2->setText("[Количество]");
 }
 
 void NewEventCreationForm::clearDescription() {
     this->ui->textEdit->setText("[Описание события]");
 }
-
 
 void NewEventCreationForm::on_calendarWidget_selectionChanged()
 {
