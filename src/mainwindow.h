@@ -10,6 +10,10 @@
 #include <QTableWidgetItem>
 #include "event.h"
 #include "neweventcreationform.h"
+#include <QNetworkAccessManager>
+#include <QNetworkReply>
+#include <QMessageBox>
+#include <QUrlQuery>
 
 namespace Ui {
 class MainWindow;
@@ -30,8 +34,11 @@ public:
 private slots:
     void on_pushButton_clicked();
     void new_event_created();
-
     void on_listView_clicked(const QModelIndex &index);
+    void on_pushButton_3_clicked();
+    void onfinish(QNetworkReply *rep);
+
+    void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;

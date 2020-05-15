@@ -5,17 +5,17 @@
 
 class Event {
 public:
-    Event(QString name, QString description, int done);
+    Event(int plan, QString description, int done);
 
-    QString getName();
+    int getPlan();
     QString getDescription();
     int getDone();
 
-    void setName(QString name);
+    void setPlan(int plan);
     void setDescription(QString description);
     void setDone(int done);
 private:
-    QString name;
+    int plan;
     QString description;
     int done;
 };
