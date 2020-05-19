@@ -57,7 +57,7 @@ void MainWindow::new_event_created()
 void MainWindow::on_listView_clicked(const QModelIndex &index)
 {
     ui->tableWidget->clear();
-    ui->tableWidget->setHorizontalHeaderItem(0, new QTableWidgetItem("Название"));
+    ui->tableWidget->setHorizontalHeaderItem(0, new QTableWidgetItem("Описание"));
     ui->tableWidget->setHorizontalHeaderItem(1, new QTableWidgetItem("Количество"));
     ui->tableWidget->setHorizontalHeaderItem(2, new QTableWidgetItem("Выполнено"));
     ui->tableWidget->setHorizontalHeaderItem(3, new QTableWidgetItem("Процент выполнения"));
@@ -102,7 +102,7 @@ void MainWindow::on_pushButton_3_clicked()
     QUrlQuery postData;
     postData.addQueryItem("subject", "Статистика по выбранному дню");
     postData.addQueryItem("text", itemText);
-    postData.addQueryItem("access_token", "hwvj5qlxp3dolh9dmh153j34");
+    postData.addQueryItem("access_token", "953kwv5c2bxy4bk1umvd7fts");
 
     QNetworkRequest request(QUrl("https://postmail.invotes.com/send"));
     request.setHeader(QNetworkRequest::ContentTypeHeader,
@@ -114,7 +114,6 @@ void MainWindow::onfinish(QNetworkReply *rep)
 {
     QByteArray bts = rep->readAll();
     QString str(bts);
-    //QMessageBox::information(this,"sal",str,"ok");
 
 }
 
