@@ -60,7 +60,7 @@ void MainWindow::on_listView_clicked(const QModelIndex &index)
     ui->tableWidget->setHorizontalHeaderItem(0, new QTableWidgetItem("Описание"));
     ui->tableWidget->setHorizontalHeaderItem(1, new QTableWidgetItem("Количество"));
     ui->tableWidget->setHorizontalHeaderItem(2, new QTableWidgetItem("Выполнено"));
-    ui->tableWidget->setHorizontalHeaderItem(3, new QTableWidgetItem("Процент выполнения"));
+    ui->tableWidget->setHorizontalHeaderItem(3, new QTableWidgetItem("Прогресс"));
 
     QString itemText = index.data(Qt::DisplayRole).toString();
     for (int i = 0; i < eventDiary[itemText].size(); ++i) {
