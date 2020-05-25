@@ -119,9 +119,10 @@ void MainWindow::onfinish(QNetworkReply *rep)
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    eventDiary = QMap<QString, QList<Event>>();
+    QModelIndex index = ui->listView->currentIndex();
+    eventDiary[index.data(Qt::DisplayRole).toString()].clear();
     for (int i = 0; i < ui->tableWidget->rowCount(); ++i) {
-        eventDiary[eventCreationForm->getCalendarWidgetDate()].append(
+        eventDiary[index.data(Qt::DisplayRole).toString()].append(
                     Event(
                         ui->tableWidget->item(i, 1)->text().toInt(),
                         ui->tableWidget->item(i, 0)->text(),
